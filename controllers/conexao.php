@@ -1,8 +1,8 @@
 <?php
 $servidor = "127.0.0.1";
 $usuario = "root";
-$senha = ""; 
-$banco = 'cadastro_fotos';
+$senha = "naujjuan99"; 
+$banco = 'sistemaCarousel';
 
 $mysqli = new MySQLi($servidor, $usuario, $senha, $banco);
 

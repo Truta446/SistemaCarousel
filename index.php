@@ -1,37 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+<html lang="pt-br" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="A simple content slider with depth-like zoom functionality" />
+		<meta name="keywords" content="blueprint, template, slider, zoom, javascript, depth, 3d, css" />
+		<meta name="author" content="Codrops" />
 
-        <link href="public/css/login.scss" rel="stylesheet" />
-    </head>
-    <body>
-        <div class="cont">
-            <div class="demo">
-                <div class="login">
-                    <div class="login__check"></div>
-                    <div class="login__form">
-                        <div class="login__row">
-                            <svg class="login__icon name svg-icon" viewBox="0 0 20 20">
-                                <path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8" />
-                            </svg>
-                            <input type="text" class="login__input name" placeholder="Username"/>
-                        </div>
-                        <div class="login__row">
-                            <svg class="login__icon pass svg-icon" viewBox="0 0 20 20">
-                                <path d="M0,20 20,20 20,8 0,8z M10,13 10,16z M4,8 a6,8 0 0,1 12,0" />
-                            </svg>
-                            <input type="password" class="login__input pass" placeholder="Password"/>
-                        </div>
-                        <button type="button" class="login__submit">Sign in</button>
-                    </div>
-                </div>                    
-            </div>
-        </div>
+		<title>Carousel System</title>
+		<link rel="shortcut icon" href="./public/images/favicon.ico">
 
-        <script src="public/js/login.js" type="text/javascript"></script>
-    </body>
+		<link rel="stylesheet" type="text/css" href="./public/fonts/feather/style.css">
+		<link rel="stylesheet" type="text/css" href="./public/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="./public/css/component.css" />
+	</head>
+	<body>
+		<!-- Main container -->
+		<div class="container">
+			<!-- Blueprint header -->
+			<header class="bp-header cf">
+				<span>Blueprint <span class="bp-icon bp-icon-about" data-content="The Blueprints are a collection of basic and minimal website concepts, components, plugins and layouts with minimal style for easy adaption and usage, or simply for inspiration."></span></span>
+				<h1>Zoom Slider</h1>
+				<nav>
+					<button class="button"><a style="background-color: #222125;" href="./views/login.php">Login</a></button>
+				</nav>
+			</header>
+			<!-- Grid -->
+			<section class="slider">
+				<div class="slide slide--current" data-content="content-1">
+					<div class="slide__mover">
+						<div class="zoomer flex-center">
+							<img class="zoomer__image" src="./public/images/iphone.png" alt="iPhone" />
+							<div class="preview">
+								<img src="./public/images/iphone-content-preview.png" alt="iPhone app preview" />
+								<div class="zoomer__area zoomer__area--size-2"></div>
+							</div>
+						</div>
+					</div>
+					<h2 class="slide__title"><span>The Classy</span> iPhone 6</h2>
+				</div>
+				<div class="slide" data-content="content-2">
+					<div class="slide__mover">
+						<div class="zoomer flex-center">
+							<img class="zoomer__image" src="./public/images/ipad.png" alt="iPad Mini" />
+							<div class="preview">
+								<img src="./public/images/ipad-content-preview.png" alt="iPad Mini app preview" />
+								<div class="zoomer__area zoomer__area--size-4"></div>
+							</div>
+						</div>
+					</div>
+					<h2 class="slide__title"><span>The Fantastic</span> iPad Mini</h2>
+				</div>
+				<div class="slide" data-content="content-3">
+					<div class="slide__mover">
+						<div class="zoomer flex-center">
+							<img class="zoomer__image" src="./public/images/macbook.png" alt="MacBook" />
+							<div class="preview">
+								<img src="./public/images/macbook-content-preview.jpg" alt="MacBook app preview" />
+								<div class="zoomer__area zoomer__area--size-3"></div>
+							</div>
+						</div>
+					</div>
+					<h2 class="slide__title"><span>The Amazing</span> MacBook</h2>
+				</div>
+				<div class="slide" data-content="content-4">
+					<div class="slide__mover">
+						<div class="zoomer flex-center">
+							<img class="zoomer__image" src="./public/images/imac.png" alt="iMac" />
+							<div class="preview">
+								<img src="./public/images/imac-content-preview.jpg" alt="iMac app preview" />
+								<div class="zoomer__area zoomer__area--size-5"></div>
+							</div>
+						</div>
+					</div>
+					<h2 class="slide__title"><span>The Glorious</span> iMac</h2>
+				</div>
+				<div class="slide" data-content="content-5">
+					<div class="slide__mover">
+						<div class="zoomer flex-center">
+							<img class="zoomer__image" src="./public/images/apple-watch.png" alt="Apple Watch" />
+							<div class="preview rounded">
+								<img src="./public/images/apple-watch-content-preview.png" alt="Apple Watch app preview" />
+								<div class="zoomer__area zoomer__area--size-1"></div>
+							</div>
+						</div>
+					</div>
+					<h2 class="slide__title"><span>The Fabulous</span> Apple Watch</h2>
+				</div>
+				<nav class="slider__nav">
+					<button class="button button--nav-prev"><i class="icon icon--arrow-left"></i><span class="text-hidden">Previous product</span></button>
+					<button class="button button--zoom"><i class="icon icon--zoom"></i><span class="text-hidden">View details</span></button>
+					<button class="button button--nav-next"><i class="icon icon--arrow-right"></i><span class="text-hidden">Next product</span></button>
+				</nav>
+			</section>
+			<!-- /slider-->
+			<section class="content">
+				<div class="content__item" id="content-1">
+					<img class="content__item-img rounded-right" src="./public/images/iphone-content.png" alt="Apple Watch Content" />
+					<div class="content__item-inner">
+						<h2>The iPhone 6</h2>
+						<h3>Incredible performance for powerful apps</h3>
+						<p>Built on 64-bit desktop-class architecture, the new A8 chip delivers more power, even while driving a larger display. The M8 motion coprocessor efficiently gathers data from advanced sensors and a new barometer. And with increased battery life, iPhone 6 lets you do more, for longer than ever.</p>
+					</div>
+				</div>
+				<div class="content__item" id="content-2">
+					<img class="content__item-img rounded-right" src="./public/images/ipad-content.jpg" alt="iPad Mini Content" />
+					<div class="content__item-inner">
+						<h2>The iPad Mini</h2>
+						<h3>Desktop-class architecture without a desktop</h3>
+						<p>Don’t let its size fool you. iPad mini 3 is powered by an A7 chip with 64-bit desktop-class architecture. A7 delivers amazing processing power without sacriﬁcing battery life. So you get incredible performance in a device you can take with you wherever you go.</p>
+					</div>
+				</div>
+				<div class="content__item" id="content-3">
+					<img class="content__item-img rounded-right" src="./public/images/macbook-content.jpg" alt="MacBook Content" />
+					<div class="content__item-inner">
+						<h2>The MacBook</h2>
+						<h3>It's the future of the notebook</h3>
+						<p>With the new MacBook, we set out to do the impossible: engineer a full-size experience into the lightest and most compact Mac notebook ever. That meant reimagining every element to make it not only lighter and thinner but also better. The result is more than just a new notebook. It's the future of the notebook.</p>
+					</div>
+				</div>
+				<div class="content__item" id="content-4">
+					<img class="content__item-img rounded-right" src="./public/images/imac-content.jpg" alt="iMac Content" />
+					<div class="content__item-inner">
+						<h2>The iMac</h2>
+						<h3>Engineered to the very last detail</h3>
+						<p>Every new Mac comes with Photos, iMovie, GarageBand, Pages, Numbers, and Keynote. So you can be creative with your photos, videos, music, documents, spreadsheets, and presentations right from the start. You also get great apps for email, surfing the web, sending texts, and making FaceTime calls — there’s even an app for finding new apps.</p>
+					</div>
+				</div>
+				<div class="content__item" id="content-5">
+					<img class="content__item-img rounded-right" src="./public/images/apple-watch-content.png" alt="Apple Watch Content" />
+					<div class="content__item-inner">
+						<h2>The Apple Watch</h2>
+						<h3>Entirely new ways to stay in touch</h3>
+						<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message. Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch, or even your heartbeat. </p>
+					</div>
+				</div>
+				<button class="button button--close"><i class="icon icon--circle-cross"></i><span class="text-hidden">Close content</span></button>
+			</section>
+		</div>
+
+		<script src="./public/js/modernizr.custom.js"></script>
+		<script src="./public/js/classie.js"></script>
+		<script src="./public/js/dynamics.min.js"></script>
+		<script src="./public/js/main.js"></script>
+	</body>
 </html>
