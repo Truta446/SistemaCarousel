@@ -9,11 +9,9 @@
 
         $password_db = $data[0]["senha_pessoa"];
 
-        if ($password_view === $password_db) {
-            header("location: ../views/cadastro.php");
-        } else {
-            header("location: ../views/login.php");
-        }
+        $test = $password_view === $password_db ? "cadastro" : "login";
+
+        header("location: ../views/{$test}.php");
     }
 
     function buscaSenha($email) {
@@ -28,7 +26,6 @@
                 $val = is_null($val) ? '' : $val;
                 $d["$key"] = $val;
             }
-
             array_push($data, $d);	
         }
 
