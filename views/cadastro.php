@@ -32,26 +32,26 @@
 					<i class="fa fa-close" aria-hidden="true"></i>
 				</button>
 
-				<form class="contact100-form validate-form">
+				<form class="contact100-form validate-form" action="../controllers/insereController.php" method="post" enctype="multipart/form-data">
 					<span class="contact100-form-title">
 						Inserção de Imagens
 					</span>
 
-					<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Name is required">
+					<div class="wrap-input100 validate-input" data-validate="A descrição é obrigatória.">
 						<span class="label-input100">Descrição</span>
-						<input class="input100" type="text" name="name" placeholder="Enter your name">
+						<input class="input100" type="text" name="description_image" required>
 						<span class="focus-input100"></span>
 					</div>
 
-					<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<span class="label-input100">Informações</span>
-						<input class="input100" type="text" name="email" placeholder="Enter your email addess">
+					<div class="wrap-input100 validate-input">
+						<span class="label-input100">Informações adicionais</span>
+						<input class="input100" type="text" name="info_image">
 						<span class="focus-input100"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Message is required">
-						<span class="label-input100">Message</span>
-						<input type="file" class="input100" name="message" placeholder="Your message here..."></input>
+					<div class="wrap-input100 validate-input" data-validate = "O arquivo é obrigatório.">
+						<span class="label-input100">Arquivo</span>
+						<input type="file" class="input100" name="file_image"></input>
 						<span class="focus-input100"></span>
 					</div>
 
